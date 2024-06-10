@@ -8,11 +8,14 @@ function MainContainer() {
     if(!movies) return;
     
     const Mainmovie=movies[0];
-     const { original_title, overview }= Mainmovie;
+     const { original_title, overview, id }= Mainmovie;
+    //  var {release_date} = Mainmovie;
+     
   return (
-    <div>
+    <div className=''>  
       <Videotitle title={original_title} overview={overview} />
-      <Videocover/>
+      <Videocover movieId={id}/>
+      {/* <h1>{release_date}</h1> */}
     </div>
   )
 }

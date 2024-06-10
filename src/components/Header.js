@@ -3,30 +3,37 @@ import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { removeUser } from '../utils/userSlice'
 import { useSelector } from 'react-redux'
+// import GptSearch from './GptSearch'
+import { toggleSearchView } from '../utils/gptSlice'
+import { LOGO } from '../utils/constants'
+
 
 const Header = () => {
-  // const user = useSelector((store)=> store.user)
-  // if(user =! null) console.log("user", user.uid)
+
   const select = useSelector(store => store.user) 
   const navigate = useNavigate()
 const dispatch = useDispatch()
-  // console.log("select =", select)
+  
   const handleClick = () => {
     dispatch(removeUser())
     navigate("/")
   }
-  
+   const handleGptSearchClick =()=>{
+    dispatch(toggleSearchView())
+
+   }
   return (
-    <div className='absolute flex justify-between w-screen px-8 py-2 bg-gradient-to-b from-black z-10'>
-      <img className='w-44' src = "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" 
+    <div className='absolute flex justify-between w-screen px-8 py-2 bg-gradient from-black z-10'>
+      <img className='w-44' src = {LOGO} 
        alt='logo'/>
        
       { select &&
-    <div className='flex justify-between w-32 items-center'>
+      <div className='flex p-2 items-center'>
+        <button className='py-2 px-3 mx-4 my-2  w-34 text-black bg-blue-300 rounded-3xl' onClick={handleGptSearchClick}>🔎</button>
         <img 
         className='w-10 h-10'
         src={select?.photoURL} alt="logo" />
-        <button className='font-bold text-white cursor-pointer' onClick={handleClick}>(Sign Out)</button>
+        <button className='font-bold text-white py-2 px-4 mx-4 my-2 border-solid border-2 border-white bg-black cursor-pointer' onClick={handleClick}>Sign Out</button>
     </div>
 }
     </div>

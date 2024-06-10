@@ -36,10 +36,11 @@
 
 # Day 6
 - Created Redux Store with userSlice 
-- implemented useNavigate hook to navigate among signin/out page and browser page after successful authentication 
-  by the imported functions from firebase
-- shifted router path from Body.js to App.js 
-   -We initially placed the routing path and the router provider in the Body.js and we were providing navigate in th esame file, which led to an error. Consequently, we relocated the routing path router provider to the App.js (parent component) to rectify this issue.
+  npm i -D @reduxjs/toolkit
+  npm i react-redux
+  onAuthStateChanged managed all the actions collectively in the root file (Body.js)
+  Dispatch hook for updating the store & Navigate hook for redirecting to the designated pages.
+
 
 # Day 7
 - Authentication of SignIn and SignUp using firebase's predefined functions signInUserWithEmailAndPassword and     
@@ -49,6 +50,14 @@
 - 
 
 # Day 8
+Lecture no. 2 - 2:15:00
+
+ VIDEO 2
+- implemented useNavigate hook to navigate among signin/out page and browser page after successful authentication 
+  by the imported functions from firebase
+- shifted router path from Body.js to App.js (Header.js for now)
+   -We initially placed the routing path and the router provider in the Body.js and we were providing navigate in th esame file, which led to an error. Consequently, we relocated the routing path router provider to the App.js (parent component) to rectify this issue.
+- Mounting- Unmountiong Functionality
 
 
 # Features

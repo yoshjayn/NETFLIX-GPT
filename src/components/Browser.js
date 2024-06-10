@@ -1,6 +1,14 @@
 import Header from './Header'
 import MainContainer from './MainContainer'
 import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
+import SecondaryContainer from './SecondaryContainer';
+import GptSearch from './GptSearch';
+import { useSelector } from 'react-redux';
+import usePopularMovies from '../hooks/usePopularMovies';
+
+import useUpcomingMovies from '../hooks/useUpcomingMovies';
+import useTopRatedMovies from '../hooks/useTopRatedMovies';
+
 
 const Browser = () => {
   // async function getmoviedata(){
@@ -15,12 +23,27 @@ const Browser = () => {
   // useEffect(()=>{
   //   getmoviedata();
   // },[]);
+  const showGptSearch = useSelector((store)=> store.gpt.showGptSearch);
   useNowPlayingMovies();
+  usePopularMovies();
+  useTopRatedMovies();
+  useUpcomingMovies();
+  
   return (
     <div>
         <Header/>
-        <div className='absolute top-24'>
-          <MainContainer/>
+        {showGptSearch ? (
+        <GptSearch/>
+        ):(
+        <>
+          <MainContainer/>           
+          <SecondaryContainer/>
+        </>
+        )}
+        
+        <div className=' top-24'> 
+        {/* <MainContainer/>           
+          <SecondaryContainer/> */}
         </div>
     </div>
   )
