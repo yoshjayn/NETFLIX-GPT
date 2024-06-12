@@ -1,4 +1,5 @@
 import { COVER } from "../utils/constants"
+import GptPage from "./GptPage"
 import GptSearchArea from "./GptSearchArea"
 
 const GptSearch = () => {
@@ -10,6 +11,7 @@ const GptSearch = () => {
         alt='cover'/>
       </div>
 <GptSearchArea/>
+<GptPage/>
     </div>
   )
 
