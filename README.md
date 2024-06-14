@@ -1,17 +1,5 @@
 # Netflix GPT
 
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4N2I3MmIwZTkzNTdhNzdlMTgxZThjYmYwMjRiOTY1NiIsInN1YiI6IjY2MjVkNmYzNjJmMzM1MDE3ZGRhNTcwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.s-6-DKS8KZXXRnyli52i6B7gQbTMuE61zyV6K5abpAc'
-
-    Authorization: 'Bearer' + process.env.REACT_APP_TMD_KEY
-
-    
-export const OPENai_API_KEY = "sk-proj-oeWrPpNqha552YcsmfYyT3BlbkFJN8KNkOquaJ7x5f92DPSi";
-
-export const OPENai_API_KEY = process.env.REACT_APP_OPENAI_KEY
-
-
-
-
 # DAY 1
 -Create React App           
 -Configured TailwindCSS    
