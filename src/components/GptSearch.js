@@ -6,12 +6,15 @@ const GptSearch = () => {
   return (
     <div>
       <div className='absolute -z-10'>
-        <img 
+        <img className="h-screen object-cover md: w-screen"
         src={COVER} 
         alt='cover'/>
       </div>
-<GptSearchArea/>
-<GptPage/>
+      <div className="">
+        <GptSearchArea/>
+      <GptPage/>
+      </div>
+
     </div>
   )
 

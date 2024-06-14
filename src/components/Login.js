@@ -109,11 +109,11 @@ const Login = () => {
     <div>
       <Header/>
       <div className='absolute'>
-        <img 
+        <img className='md:w-screen h-screen object-cover'
         src="https://assets.nflxext.com/ffe/siteui/vlv3/7ca5b7c7-20aa-42a8-a278-f801b0d65fa1/fb548c0a-8582-43c5-9fba-cd98bf27452f/IN-en-20240326-popsignuptwoweeks-perspective_alpha_website_medium.jpg" 
         alt='cover'/>
       </div>
-      <form onSubmit={(e)=>e.preventDefault()} className='absolute p-12 w-3/12 bg-black bg-opacity-80 my-16 mx-auto right-8 left-8 text-white'>
+      <form onSubmit={(e)=>e.preventDefault()} className='absolute p-12 w-3/4 md:w-3/12 bg-black bg-opacity-80 my-20 mx-auto right-8 left-8 text-white'>
       <h1 className='font-bold text-3xl py-4' >{isSignIn ?"Sign In":"Sign Up"}</h1>
       
       {!isSignIn &&                         //if isSignIn is false, the second statement won't process i.e. Name Input won't appear on UI

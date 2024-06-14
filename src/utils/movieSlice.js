@@ -6,7 +6,7 @@ const movieSlice=createSlice(
         initialState:{
             nowPlaying : null,
             Upcoming:null,
-            TopeRated:null,
+            TopRated:null,
             Popular:null,
             trailerVideo: null
         },
@@ -18,7 +18,7 @@ const movieSlice=createSlice(
                 state.Upcoming=action.payload
             },
             addTopRated:(state,action)=>{
-                state.TopeRated=action.payload
+                state.TopRated=action.payload
             },
             addPopular:(state,action)=>{
                 state.Popular=action.payload
